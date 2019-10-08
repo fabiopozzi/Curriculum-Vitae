@@ -1,0 +1,231 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Deedy - One Page Two Column Resume
+% LaTeX Template
+% Version 1.1 (30/4/2014)
+%
+% Original author:
+% Debarghya Das (http://debarghyadas.com)
+%
+% Original repository:
+% https://github.com/deedydas/Deedy-Resume
+%
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+% This template uses several fonts not included with Windows/Linux by
+% default. If you get compilation errors saying a font is missing, find the line
+% on which the font is used and either change it to a font included with your
+% operating system or comment the line out to use the default font.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% TODO:
+% 1. Integrate biber/bibtex for article citation under publications.
+% 2. Figure out a smoother way for the document to flow onto the next page.
+% 3. Add styling information for a "Projects/Hacks" section.
+% 4. Add location/address information
+% 5. Merge OpenFont and MacFonts as a single sty with options.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% CHANGELOG:
+% v1.1:
+% 1. Fixed several compilation bugs with \renewcommand
+% 2. Got Open-source fonts (Windows/Linux support)
+% 3. Added Last Updated
+% 4. Move Title styling into .sty
+% 5. Commented .sty file.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Known Issues:
+% 1. Overflows onto second page if any column's contents are more than the
+% vertical limit
+% 2. Hacky space on the first bullet point on the second column.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[]{deedy-resume-openfont}
+
+\usepackage{etoolbox}
+\AtBeginEnvironment{tightemize}{\itshape\small}
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     TITLE NAME
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\namesection{Fabio}{Pozzi}{
+\href{mailto:pozzi.fabio@gmail.com}{pozzi.fabio@gmail.com}\\
+333 3005059
+}
+
+\begin{minipage}[t]{0.90\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EXPERIENCE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Sommario}
+\vspace*{2mm}
+Attualmente insegno informatica presso il Liceo Scientifico San Lorenzo.\\
+Mi sono occupato di sviluppo software e firmware nell’ambito della gestione di sensori e dispositivi embedded interconnessi tramite diverse
+tecnologie radio (WiFi, Bluetooth, Sigfox).\\
+Ho maturato una significativa esperienza come sviluppatore software nel settore automotive motorsport. Ho infatti partecipato allo sviluppo di più
+progetti, a partire dal sistema di telemetria dati ed audio per i campionati di Formula 1, WEC e Formula-E.\\
+Durante la mia carriera lavorativa ho maturato anche esperienza nello sviluppo di applicazioni web, principalmente con l’uso del framework Ruby
+On Rails.\\
+Ho una buona conoscenza dei linguaggi Python, Go e C++.\\
+Ho esperienza nell’uso di SVN e git per il versioning del codice.
+\vspace*{2mm}
+%------------------------------------------------
+% Experience
+%------------------------------------------------
+
+\section{Esperienza}
+\vspace*{2mm}
+
+\runsubsection{Liceo Scientifico San Lorenzo}
+\descript{| Insegnante informatica}
+
+\location{Settembre 2018 – presente | Novara (NO)}
+Docenza di informatica in cinque classi della sezione scienze applicate del liceo scientifico.\\
+Docente del corso di preparazione all'esame ECDL offerto dalla
+scuola.\\
+Responsabile per il cyberbullismo dell'istituto.
+\vspace{\topsep}
+
+\runsubsection{Reios srl}
+\descript{| Sviluppatore embedded}
+
+\location{Giugno 2017 – Dicembre 2017 | Novara (NO)}
+Sviluppo e valutazione performance su piattaforma Linux ed STM32 di un sistema di comunicazione basato su Wi-Fi mesh.
+Sviluppo firmware acquisizione e controllo per applicazioni IoT.
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+
+\runsubsection{FIT2YOU Broker}
+\descript{| Sviluppatore Ruby on Rails}
+
+\location{Gennaio 2017 – Giugno 2017 | Vigevano (PV)}
+Sviluppo web di una piattaforma B2B di supporto alla vendita di polizze assicurative auto.
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+
+\runsubsection{Magneti Marelli Motorsport}
+\descript{| Sviluppatore embedded}
+
+\location{Dicembre 2011 – Dicembre 2016 | Corbetta (MI)}
+Sviluppo software di gestione flussi telemetria audio e dati lato macchina:
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+\item Sviluppo di software applicativo in C
+\item Sviluppo interfaccia web e backend per gestione centralina telemetria
+\item Sviluppo firmware su piattaforma PowerPC
+\item Sviluppo software validazione e test hardware
+\item Sviluppo Linux kernel drivers
+\end{tightemize}
+\vspace*{4mm}
+%------------------------------------------------
+\runsubsection{Ennova research}
+\descript{| Sviluppatore web}
+
+\location{Settembre 2011 – Dicembre 2011 | Lomazzo (CO)}
+Sviluppo applicazione web basata su Ruby on Rails per la pianificazione e la gestione della distribuzione di riviste.
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+\item Sviluppo backend
+\item Gestione interazione con applicazione mobile Android
+\item Gestione pianificazione con uso API Google maps
+\end{tightemize}
+\vspace*{4mm}
+%------------------------------------------------
+\runsubsection{Dsmart s.r.l.}
+\descript{| Sviluppatore web}
+
+\location{Ottobre 2010 – Aprile 2011 | Bussero (MI)}
+Sviluppo applicazioni web basate su Ruby on Rails per la gestione di associazioni sportive.
+\vspace*{4mm}
+%------------------------------------------------
+%\sectionspace % Some whitespace after the section
+\end{minipage}
+\newpage % Start a new page
+\begin{minipage}[t]{0.90\textwidth} % The right column takes up 66% of the text width of the page
+%------------------------------------------------
+% Education
+%------------------------------------------------
+
+\section{Formazione} 
+\vspace*{4mm}
+\subsection{Università Bicocca di Milano}
+
+\descript{24cfu}
+\vspace*{1mm}
+Ho acquisito i 24cfu in ambito antropo-psico-pedagogico, metodologie e tecnologie didattiche.
+
+\vspace*{4mm}
+\subsection{Politecnico di Milano}
+
+\descript{Laurea specialistica in Ingegneria Informatica}
+\location{05/2008 - 12/2011 \\ Voto: 101/110}
+\vspace*{1mm}
+Analisi, progettazione e sviluppo di contromisure per vulnerabilità basate su alterazioni del flusso di controllo.\\
+LibDefender: una libreria dinamica per garantire l'integrità del flusso di esecuzione.
+
+\vspace*{4mm}
+
+\descript{Laurea triennale in Ingegneria Informatica}
+\location{09/2003 - 05/2008 \\ Voto: 99/110}
+\vspace*{1mm}
+Implementazione di un sistema di intrusion prevention nel kernel Linux.
+\vspace*{10mm}
+
+%------------------------------------------------
+% Research
+%------------------------------------------------
+
+\section{Pubblicazioni}
+\vspace*{3mm}
+\runsubsection{Drop-In Control Flow Hijacking Prevention through Dynamic Library Interception}
+\descript{ \\ Information Technology: New Generations (ITNG)}
+\vspace*{1mm}
+\location{Aprile 2013 | Las Vegas, NV}
+ % Some whitespace after the section
+\vspace*{10mm}
+%----------------------------------------------------------------------------------------
+
+
+%------------------------------------------------
+% Skills
+%------------------------------------------------
+\section{Competenze}
+\descript{Linguaggi di programmazione}
+\vspace*{4mm}
+\begin{tightemize}
+  \item C
+  \item Ruby
+  \item Python 
+  \item Go
+\end{tightemize}
+\vspace*{4mm}
+\descript{Version Control Systems}
+\vspace*{4mm}
+\begin{tightemize}
+  \item Git
+  \item Subversion
+\end{tightemize}
+
+\vspace*{10mm}
+
+\section{Lingue}
+\vspace*{4mm}
+Inglese \\ TOEFL 97/110 (2009) 
+
+
+\vspace*{12mm}
+Autorizzo il trattamento dei miei dati personali ai sensi dell’art. 13 d. lgs. 30 giugno 2003 n°196 \\ “Codice in materia di protezione dei dati personali” e dell’art. 13 GDPR 679/16 \\ “Regolamento europeo sulla protezione dei dati personali”.
+
+%----------------------------------------------------------------------------------------
+
+\hfill
+\end{minipage} % The end of the right column
+
+\end{document}  \documentclass[]{article}
